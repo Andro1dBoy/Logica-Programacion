@@ -1,0 +1,68 @@
+<meta charset=“UTF-8”>
+
+<h1>Programa juego de adivinación</h1>
+
+<script>
+
+	function jumpline() {
+
+		document.write("<br>");
+		document.write("<br>");
+		document.write("<br>");
+
+
+	}
+
+	function imprimir(frase) {
+
+		document.write(frase);
+		jumpline();
+
+	}
+
+	var numPensado = Math.round(Math.random()*10);
+	var intentos = 3;
+	var contador = 1; //siempre que se trabaja con While se necesita un contador
+
+	while (contador <= intentos) { 
+
+
+		var numLanzado = parseInt(prompt("Adivina el número que estoy pensando del 0 al 10"));
+
+		if (numPensado == numLanzado) {
+
+			alert("¡Sí! Acertaste en el intento: " + contador + ". El número pensado es: " + numPensado);
+
+			break;
+
+		}
+
+		else {
+
+			alert("Oh no, has fallado");
+
+		}
+
+		contador++;
+
+	}
+
+	if (numPensado == numLanzado) {
+
+		imprimir("¡Sí! Acertaste en el intento: " + contador + ". El número pensado es: " + numPensado);
+
+
+		
+
+	}
+
+	else {
+
+		imprimir("Has fallado todos los intentos. El número era pensado: " + numPensado);
+
+	}
+
+	imprimir("Fin");
+
+</script>
+

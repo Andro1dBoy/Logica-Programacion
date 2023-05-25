@@ -1,0 +1,48 @@
+<canvas width="600" height="400"></canvas>
+
+<script>
+
+    var pantalla = document.querySelector("canvas");
+    var pincel = pantalla.getContext("2d");
+
+    pincel.fillStyle="lightgrey";
+    pincel.fillRect(0,0,600,400);
+
+    function repetirInvertido(instruccion, veces) {
+        for (let i = 0; i < veces; i++) {
+    console.log(instruccion.split('').reverse().join(''));
+ 
+  }
+
+
+
+    
+    function disenarCircunferencia(x,y,radio) {
+        pincel.fillStyle = "blue";
+        pincel.beginPath(); //camino o comenzar a graficar
+        pincel.arc(x,y,radio,0,2*Math.PI); //dibujar circunferencia //2*3.14 es = a 2 veces Pi y se puede cambiar por: 2*Math.PI
+        pincel.fill(); //funciona llenar 
+
+    }
+
+    function limpiarPantalla() {
+
+        pincel.clearRect(0,0,600,400) 
+
+    }
+
+    var x = 0
+
+    function actualizarPantalla() {
+
+        limpiarPantalla();
+        disenarCircunferencia(x,20,10);
+        x++;
+
+    }
+}
+
+    setInterval(actualizarPantalla,10);
+
+
+</script>

@@ -1,0 +1,33 @@
+ <meta charset=“UTF-8”>
+
+<h1> Programa - Año mundial </h1>
+
+<script>
+
+function saltarLinea() {
+    document.write("<br>");    
+    document.write("<br>");    
+    document.write("<br>");    
+}  
+
+function imprimir(frase) {
+    document.write(frase);
+    saltarLinea();
+}
+
+
+var anomundial = 1930;
+
+var limite = parseInt(prompt("Ingresa año para calcular"))
+    
+    while (anomundial <= limite) {
+
+        imprimir("Hubo Mundial de la FIFA en el año " + anomundial);
+        anomundial = anomundial + 4;
+        
+   }
+
+   imprimir("Fin")
+
+
+</script>
